@@ -4,5 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+bytes = "1.6.0"
 galileo-mvt = "0.1.1"
-geozero = "0.13.0"
+geozero = { version = "0.13.0", features = ["with-mvt"] }
+tokio = { version = "1.37.0", features = ["full"] }
