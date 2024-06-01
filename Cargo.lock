@@ -285,8 +285,7 @@ checksum = "28a80e3145d8ad11ba0995949bbcf48b9df2be62772b3d351ef017dff6ecb853"
 [[package]]
 name = "galileo-mvt"
 version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f63eef04f6803f529a048914b47ff0715fcf4eb8dba40e9c51e2af397a44c103"
+source = "git+https://github.com/catenarytransit/galileo/#9128ecba3f149f45c9bf7d097d305fd6877063fd"
 dependencies = [
  "bytes",
  "galileo-types",
@@ -301,8 +300,7 @@ dependencies = [
 [[package]]
 name = "galileo-types"
 version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "11377a68ba062858164df5ede24aae1808c46fc9eea48d726d41230b06190777"
+source = "git+https://github.com/catenarytransit/galileo/#9128ecba3f149f45c9bf7d097d305fd6877063fd"
 dependencies = [
  "geo-types",
  "geodesy",
@@ -582,6 +580,7 @@ dependencies = [
  "bytes",
  "galileo-mvt",
  "geozero",
+ "prost 0.12.6",
  "tokio",
 ]
 

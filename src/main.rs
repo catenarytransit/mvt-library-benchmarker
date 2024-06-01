@@ -1,12 +1,13 @@
 use bytes::Buf;
-use galileo_mvt::MvtTile as GalileoTile;
-use geozero::mvt::Message;
+use galileo_mvt::vector_tile::Tile as GalileoTile;
 use geozero::mvt::Tile as GeoZeroTile;
 use std::error::Error;
 use std::fs;
 use std::fs::File;
 use std::io::Read;
 use std::time::{Duration, Instant};
+use prost::Message;
+use geozero::mvt::Message as GeoMessage;
 
 fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     println!("Hello, world!");
@@ -22,7 +23,7 @@ fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
     let start_galileo = Instant::now();
     for _ in 0..1000 {
         //println!("Decoding galileo tile");
-        let tile = GalileoTile::decode(buffer.as_slice(), false)?;
+        let tile = GalileoTile::decode(buffer.as_slice())?;
     }
     let duration_galileo = start_galileo.elapsed();
     println!("Time elapsed in galileo is: {:?}", duration_galileo);

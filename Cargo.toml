@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 bytes = "1.6.0"
-galileo-mvt = "0.1.1"
+galileo-mvt = {git = "https://github.com/catenarytransit/galileo/"}
 geozero = { version = "0.13.0", features = ["with-mvt"] }
+prost = "0.12.6"
 tokio = { version = "1.37.0", features = ["full"] }
